@@ -8,6 +8,6 @@ public class CouvKataApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(CouvKataApplication.class, args);
-		System.out.println();
+		
 	}
 }
