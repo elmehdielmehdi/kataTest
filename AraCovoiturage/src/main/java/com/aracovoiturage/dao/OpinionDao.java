@@ -9,5 +9,9 @@ public interface OpinionDao {
 	List<Opinion> getAllOpinions();
 
 	Opinion createOpinion(final Opinion opinion);
+	
+	Opinion createOpinionTest(final Opinion opinion);
+	
+	
 
 }

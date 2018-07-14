@@ -35,4 +35,10 @@ public class OpinionDaoImpl implements OpinionDao {
 		return em.merge(opinion);
 	}
 
+	@Override
+	public Opinion createOpinionTest(Opinion opinion) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
