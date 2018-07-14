@@ -1,0 +1,50 @@
+<p *ngIf="!contact">
+
+  <span >Ops sorry contact is empy</span> 
+</p>
+
+
+<mat-accordion class="example-headers-align" *ngIf="contact">
+ <mat-expansion-panel [expanded]="true">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+         {{contact.nom}} {{contact.prenom}}
+      </mat-panel-title>
+      <mat-panel-description>
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+		<table>
+			<tr>
+				<td><mat-label class="details-contact-label">Nom</mat-label></td>
+				<td><mat-label>{{contact.nom}}</mat-label></td>
+			</tr>
+			<tr>
+				<td><mat-label class="details-contact-label">Prénom</mat-label></td>
+				<td><mat-label>{{contact.prenom}}</mat-label></td>
+			</tr>
+			<tr>
+				<td><mat-label class="details-contact-label">date de
+					naissance</mat-label></td>
+				<td><mat-label>{{contact.dateNaissance | date:
+					'fullDate'}}</mat-label></td>
+			</tr>
+			<tr>
+				<td><mat-label class="details-contact-label">Adresse
+					mail</mat-label></td>
+				<td><mat-label>{{contact.email}}</mat-label></td>
+			</tr>
+			<tr>
+				<td><mat-label class="details-contact-label">Numéro
+					de téléphone</mat-label></td>
+				<td><mat-label>{{contact.numeroTelephone}}</mat-label></td>
+			</tr>
+			<tr>
+			</tr>
+		</table>
+		<mat-action-row>
+			<button mat-button color="warn" [routerLink]="'/contacts'">Annuler</button>
+			<button mat-button color="primary" [routerLink]="['/updateContact',contact.id]">Modifier</button>
+		</mat-action-row>
+</mat-expansion-panel>
+
+</mat-accordion>

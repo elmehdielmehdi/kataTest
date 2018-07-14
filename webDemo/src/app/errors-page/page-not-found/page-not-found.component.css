@@ -1,0 +1,20 @@
+.page-not-found-title{
+	font-weight: bold;
+	font-size: 8em;
+	text-align: center;
+	display:inline
+
+}
+
+.page-not-found-title-icon{
+	background-image: url('https://mdn.mozillademos.org/files/7693/catfront.png');
+	background-repeat: repeat-x;
+}
+
+.page-not-found-description{
+	color: gray;
+	text-align: center;
+	font-size: 1em;
+	margin: -5em;
+}
+ 

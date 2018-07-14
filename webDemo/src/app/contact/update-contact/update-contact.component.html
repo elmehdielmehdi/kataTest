@@ -1,0 +1,31 @@
+<mat-card class="example-card">
+  <mat-card-header>
+  </mat-card-header>
+      <form class="example-form" #contactForm="ngForm" (ngSubmit)="updateContact()">
+		  <mat-card-content>
+		  
+		  <mat-form-field class="example-full-width">
+			  <input matInput [(ngModel)]="contact.nom" name="nom" required #nom>
+		  </mat-form-field>
+		  
+		  <mat-form-field class="example-full-width">
+		  	<input matInput [(ngModel)]="contact.prenom" name="prenom" required #prenom>
+		  </mat-form-field>
+		  
+		  <mat-form-field class="example-full-width">
+		  	<input matInput type="date" [(ngModel)]="contact.dateNaissance" name="dataNaissance" required #dataNaissance>
+		  </mat-form-field>
+		  
+		  <mat-form-field class="example-full-width">
+		  	<input matInput [(ngModel)]="contact.numeroTelephone" name="numeroTelephone" required #numeroTelephone>
+		  </mat-form-field>
+		  
+		  </mat-card-content>
+		  
+		  <mat-card-actions>
+			  <button mat-button [disabled]="!contactForm.form.valid" type="submit">Modifier</button>
+		 	  <button mat-button [routerLink]="['/contact',contact.id]">Annuler</button>
+		  </mat-card-actions>
+	</form>
+</mat-card>
+		  
